@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #F8FAFC;
+}
+
+.sidebar{
+    width: 260px;
+    height: 100vh;
+
+    background: white;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    padding: 40px 25px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: 800;
+
+    color: #22C55E;
+
+    margin-bottom: 50px;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.menu a{
+    text-decoration: none;
+
+    color: #334155;
+
+    padding: 15px 18px;
+
+    border-radius: 16px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.menu a:hover{
+    background: #F0FDF4;
+
+    color: #22C55E;
+}
+
+.menu .active{
+    background: #22C55E;
+
+    color: white;
+}
+
+.main{
+    margin-left: 260px;
+
+    min-height: 100vh;
+
+    padding: 40px;
+
+    background: #F8FAFC;
+}
+
+.topbar{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 40px;
+}
+
+.topbar h1{
+    font-size: 34px;
+
+    color: #111827;
+}
+
+.admin-box{
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.admin-box img{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+}
+
+.admin-box span{
+    font-size: 16px;
+
+    font-weight: 500;
+
+    color: #334155;
+}
+
+.cards{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+
+    gap: 25px;
+}
+
+.card{
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 28px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card h2{
+    font-size: 42px;
+
+    color: #22C55E;
+
+    margin-bottom: 10px;
+}
+
+.card p{
+    color: #64748B;
+}
+
+.logout-btn{
+    width: 100%;
+
+    border: none;
+
+    background: #EF4444;
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 16px;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-top: 20px;
+}
+
+.logout-btn:hover{
+    background: #DC2626;
+}

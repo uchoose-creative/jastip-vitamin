@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #F8FAFC;
+}
+
+.container{
+    padding: 40px;
+}
+
+.topbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.topbar h1{
+    font-size: 36px;
+    color: #0F172A;
+}
+
+.topbar p{
+    color: #64748B;
+    margin-top: 8px;
+}
+
+.add-btn{
+    background: #22C55E;
+    color: white;
+
+    text-decoration: none;
+
+    padding: 14px 24px;
+
+    border-radius: 16px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.add-btn:hover{
+    background: #16A34A;
+}
+
+.table-box{
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 28px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+    overflow-x: auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th{
+    text-align: left;
+
+    padding: 18px;
+
+    color: #64748B;
+
+    font-size: 14px;
+}
+
+td{
+    padding: 18px;
+
+    border-top: 1px solid #E2E8F0;
+
+    color: #0F172A;
+
+    font-weight: 500;
+}
+
+.product-image{
+    width: 70px;
+    height: 70px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+.edit-btn,
+.delete-btn{
+    border: none;
+
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    display: inline-block;
+}
+
+.edit-btn{
+    background: #DBEAFE;
+    color: #2563EB;
+}
+
+.delete-btn{
+    background: #FEE2E2;
+    color: #DC2626;
+
+    margin-left: 10px;
+}
+
+.empty-text{
+    text-align: center;
+
+    color: #94A3B8;
+
+    padding: 40px;
+}
+
+.form-container{
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+.form-box{
+    width: 100%;
+    max-width: 700px;
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 32px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.form-box h1{
+    font-size: 36px;
+
+    color: #0F172A;
+
+    margin-bottom: 10px;
+}
+
+.form-box p{
+    color: #64748B;
+
+    margin-bottom: 30px;
+}
+
+.input-group{
+    margin-bottom: 22px;
+}
+
+.input-group label{
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-weight: 500;
+
+    color: #334155;
+}
+
+.input-group input,
+.input-group textarea{
+    width: 100%;
+
+    border: 1px solid #CBD5E1;
+
+    padding: 16px;
+
+    border-radius: 16px;
+
+    font-family: 'Poppins', sans-serif;
+
+    outline: none;
+}
+
+.input-group textarea{
+    min-height: 140px;
+
+    resize: none;
+}
+
+.save-btn{
+    width: 100%;
+
+    background: #22C55E;
+
+    color: white;
+
+    border: none;
+
+    padding: 18px;
+
+    border-radius: 18px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.price-box{
+    display: flex;
+
+    align-items: center;
+
+    border: 1px solid #CBD5E1;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+}
+
+.price-box span{
+    background: #F1F5F9;
+
+    padding: 16px 20px;
+
+    font-weight: 600;
+
+    color: #334155;
+}
+
+.price-box input{
+    border: none !important;
+
+    flex: 1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+
+    margin: 0;
+}
+
+table img{
+    width: 90px;
+
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+}
+
+/* =========================
+EDIT PRODUCT
+========================= */
+
+.edit-page{
+    min-height: 100vh;
+
+    background: #F8FAFC;
+
+    padding: 40px;
+}
+
+.edit-wrapper{
+    display: grid;
+
+    grid-template-columns: 380px 1fr;
+
+    gap: 40px;
+}
+
+.edit-image-section{
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+    height: fit-content;
+}
+
+.edit-image-section img{
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+
+    margin-bottom: 20px;
+}
+
+.edit-image-section h2{
+    color: #0F172A;
+
+    margin-bottom: 10px;
+}
+
+.edit-image-section p{
+    color: #64748B;
+}
+
+.edit-form-section{
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 40px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.edit-top{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 35px;
+}
+
+.edit-top h1{
+    font-size: 42px;
+
+    color: #0F172A;
+}
+
+.edit-top p{
+    color: #64748B;
+
+    margin-top: 8px;
+}
+
+.back-btn{
+    background: #E2E8F0;
+
+    color: #0F172A;
+
+    padding: 12px 22px;
+
+    border-radius: 14px;
+
+    font-weight: 600;
+}
+
+.double-input{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.edit-form-section form{
+    width: 100%;
+}
+
+.update-btn{
+    width: 100%;
+
+    border: none;
+
+    background: linear-gradient(to right,#22C55E,#16A34A);
+
+    color: white;
+
+    padding: 18px;
+
+    border-radius: 18px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    margin-top: 10px;
+}
+
+.update-btn:hover{
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 20px rgba(34,197,94,0.25);
+}
+
+.topbar-buttons{
+    display: flex;
+
+    gap: 14px;
+
+    align-items: center;
+}
+
+.back-btn{
+    background: #E2E8F0;
+
+    color: #0F172A;
+
+    text-decoration: none;
+
+    padding: 14px 22px;
+
+    border-radius: 16px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover{
+    background: #CBD5E1;
+}
+
+.form-buttons{
+    display: flex;
+
+    gap: 16px;
+
+    margin-top: 10px;
+}
+
+.form-buttons .back-btn{
+    background: #E2E8F0;
+
+    color: #0F172A;
+
+    text-decoration: none;
+
+    padding: 18px 24px;
+
+    border-radius: 18px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition: 0.3s;
+}
+
+.form-buttons .back-btn:hover{
+    background: #CBD5E1;
+}
+
+.form-buttons .save-btn{
+    flex: 1;
+}
