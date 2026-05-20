@@ -139,10 +139,10 @@
 
 @endif
 
-    <form action="/profile/update"
-          method="POST"
-          enctype="multipart/form-data">
-
+    <form action="{{ url('/profile/update') }}"
+      method="POST"
+      enctype="multipart/form-data">
+      
         @csrf
 
         <div class="input-group">
@@ -154,17 +154,6 @@
             <input type="text"
                    name="name"
                    value="{{ Auth::user()->name }}">
-
-        </div>
-
-        <div class="input-group">
-
-            <label>
-                New Password
-            </label>
-
-            <input type="password"
-                   name="password">
 
         </div>
 

@@ -10,6 +10,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 
 
+
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/login', function () {return view('login');});
@@ -49,13 +50,14 @@ Route::post('/cart/delete/{id}', [CartController::class, 'delete'])->middleware(
 Route::post('/logout', [AuthController::class, 'logout']);
 
 Route::get('/profile',
-[ProfileController::class,'index']);
+[ProfileController::class,'edit'])->middleware('auth');
 
 Route::post('/profile/update',
-[ProfileController::class,'update']);
+[ProfileController::class,'update'])->middleware('auth');
 
 Route::get('/auth/google',
 [AuthController::class, 'googleLogin']);
 
 Route::get('/auth/google/callback',
 [AuthController::class, 'googleCallback']);
+

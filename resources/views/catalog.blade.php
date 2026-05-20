@@ -35,72 +35,56 @@
         Jastip Vitamin
     </h1>
 
-    <div class="nav-icons">
+    <div class="navbar-right">
 
-        <i class="fa-solid fa-heart"></i>
+        <!-- DESKTOP ONLY -->
+        <div class="nav-icons desktop-nav">
 
-        @auth
+            <i class="fa-solid fa-heart"></i>
 
-        <a href="{{ url('/cart') }}"
-           class="cart-icon">
+            <a href="{{ url('/cart') }}"
+               class="cart-icon">
 
-            <i class="fa-solid fa-cart-shopping"></i>
+                <i class="fa-solid fa-cart-shopping"></i>
 
-        </a>
+            </a>
 
-            <<span class="user-name">
-    <span class="desktop-user">
+            <span class="user-name">
 
-    Hi, {{ Auth::user()->name }}
+               {{ Auth::user()->name ?? 'Guest' }}
 
-</span>
-</span>
+            </span>
 
-<a href="/profile">
+            <a href="/profile">
 
-    @if(Auth::user()->avatar)
+                @if(Auth::user()->avatar)
 
-        <img src="{{ asset('avatars/' . Auth::user()->avatar) }}">
+                    <img src="{{ asset('avatars/' . Auth::user()->avatar) }}">
 
-    @else
+                @else
 
-        <img src="https://i.pravatar.cc/150?img=12">
+                    <img src="https://i.pravatar.cc/150?img=12">
 
-    @endif
+                @endif
 
-</a>
-            <form action="/logout"
-                  method="POST">
+            </a>
 
-                @csrf
+        </div>
 
-                <button type="submit"
-                        class="logout-btn">
+        <!-- LOGOUT -->
+        <form action="/logout"
+              method="POST">
 
-                    Logout
+            @csrf
 
-                </button>
+            <button type="submit"
+                    class="logout-btn">
 
-            </form>
+                Logout
 
-        @else
+            </button>
 
-        <a href="{{ url('/login') }}"
-           class="cart-icon"
-           title="Login First">
-
-            <i class="fa-solid fa-cart-shopping"></i>
-
-        </a>
-
-        <a href="{{ url('/login') }}"
-           class="catalog-login-btn">
-
-            Login
-
-        </a>
-
-        @endauth
+        </form>
 
     </div>
 
@@ -161,13 +145,16 @@ SEARCH
     CATEGORY
     ========================= -->
 
-    <section class="category-section">
+   <section class="category-section">
 
-        <button class="category active">
-            All
-        </button>
+    <a href="{{ url('/catalog') }}"
+       class="category active">
 
-    </section>
+        All
+
+    </a>
+
+</section>
 
 
     <!-- =========================
@@ -262,5 +249,44 @@ SEARCH
 
 </div>
     </section>
+
+<div class="mobile-bottom-nav">
+
+    <a href="/catalog">
+
+        <i class="fa-solid fa-house"></i>
+
+    </a>
+
+    <a href="#">
+
+        <i class="fa-solid fa-heart"></i>
+
+    </a>
+
+    <a href="/cart">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+    </a>
+
+    <a href="/profile">
+
+        @if(Auth::user()->avatar)
+
+            <img src="{{ asset('avatars/' . Auth::user()->avatar) }}"
+                 class="bottom-profile-img">
+
+        @else
+
+            <img src="https://i.pravatar.cc/150?img=12"
+                 class="bottom-profile-img">
+
+        @endif
+
+    </a>
+
+</div>
+
 </body>
 </html>

@@ -67,7 +67,7 @@
 <div class="mobile-menu" id="mobile-menu">
 
     <a href="#home">Home</a>
-    <a href="#category">Category</a>
+     <a href="#choose">Choose</a>
     <a href="#products">Products</a>
     <a href="#contact">Contact</a>
 
@@ -117,36 +117,10 @@
 
     </section>
 
-    <!-- =========================
-    SEARCH
-    ========================= -->
-
-    <section class="search-section">
-
-    <form action="/catalog"
-          method="GET"
-          class="search-box">
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-        <input type="text"
-               name="search"
-               placeholder="Search vitamins...">
-
-        <button type="submit"
-                class="search-btn">
-
-            Search
-
-        </button>
-
-    </form>
-
-</section>
 
     <!-- ========================= WHY CHOOSE US ========================= -->
 
-<section class="category-section">
+<section class="category-section" id="choose">
 
     <div class="section-title">
 
